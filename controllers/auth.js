@@ -51,7 +51,7 @@ exports.login = asyncHandler(async (req, res, next) => {
 	// Create Token
 	const token = user.getSignedJwtToken();
 
-	res.status(200).json({ success: true, token, user: user.role });
+	res.status(200).json({ success: true, token, user: user.role, id: user._id });
 });
 
 //description   Get all users
